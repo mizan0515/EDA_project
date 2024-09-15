@@ -1,7 +1,7 @@
 # pages/2_📊_일일_접종자_수.py
 import streamlit as st
 import matplotlib.pyplot as plt
-import koreanize_matplotlib
+
 import pandas as pd
 import numpy as np
 

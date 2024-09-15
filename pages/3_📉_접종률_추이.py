@@ -1,7 +1,7 @@
 # pages/3_📉_접종률_추이.py
 import streamlit as st
 import matplotlib.pyplot as plt
-import koreanize_matplotlib
+
 import pandas as pd
 
 @st.cache_data
