@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import koreanize_matplotlib
 
 # 데이터 로드 함수
-@st.cache
+@st.cache_data
 def load_data():
     df = pd.read_csv('data/vaccine_data.csv', encoding='utf-8')
     return df
@@ -17,7 +18,7 @@ st.subheader('데이터 미리보기')
 st.dataframe(data.head())
 
 # 필요한 컬럼 선택
-columns_to_use = ['접종일', '당일 1차접종자 수', '1차접종 누계', '당일 2차접종자 수', '2차접종 누계', '당일 동절기접종자 수', '동절기접종 누계']
+columns_to_use = ['접종일', '접종대상자', '당일 1차접종자 수', '1차접종 누계', '당일 2차접종자 수', '2차접종 누계', '당일 동절기접종자 수', '동절기접종 누계']
 data = data[columns_to_use]
 
 # 날짜 형식 변환
