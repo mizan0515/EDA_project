@@ -54,8 +54,8 @@ fig, ax = plt.subplots()
 for i, column in enumerate(selected_daily):
     ax.bar(x + i * width, filtered_data[column], width=width, label=column)
 
-ax.set_xlabel('접종일')
-ax.set_ylabel('일일 접종자 수')
+ax.set_xlabel('Date of vaccination')
+ax.set_ylabel('Daily vaccination totals')
 
 # x축 눈금 간격 조정
 max_xticks = 10  # x축에 표시할 최대 눈금의 개수를 설정

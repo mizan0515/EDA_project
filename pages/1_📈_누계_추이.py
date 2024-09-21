@@ -47,8 +47,8 @@ filtered_data = data.loc[mask]
 fig, ax = plt.subplots()
 for vaccine_type in vaccine_types:
     ax.plot(filtered_data['접종일'], filtered_data[vaccine_type], marker='o', label=vaccine_type)
-ax.set_xlabel('접종일')
-ax.set_ylabel('접종 누계')
+ax.set_xlabel('Date of vaccination')
+ax.set_ylabel('Vaccination totals')
 ax.legend()
 ax.grid(True)
 st.pyplot(fig)
