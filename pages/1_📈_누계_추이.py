@@ -5,13 +5,16 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 @st.cache_data
-def load_data():
-    df = pd.read_csv('data/vaccine_data.csv', encoding='utf-8')
+def load_data(file_path):
+    df = pd.read_csv(file_path, encoding='utf-8')
     return df
 
 # Session State에 데이터 저장
-if 'data' not in st.session_state:
-    st.session_state['data'] = load_data()
+if 'data1' not in st.session_state:
+    st.session_state['data1'] = load_data('data/vaccine_data.csv')
+
+if 'data2' not in st.session_state:
+    st.session_state['data2'] = load_data('data/grouped_vaccine.csv')
 
 
 # Session State에서 데이터 불러오기
